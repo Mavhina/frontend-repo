@@ -1,0 +1,220 @@
+/* src/pages/BursaryDetailsPage.css */
+/* (Your existing file is mostly fine, but make buttons consistent with BursariesPage) */
+
+.bursary-details {
+  padding: 18px 22px;
+}
+
+.details-top {
+  margin-bottom: 10px;
+}
+
+.back {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.85;
+}
+
+.back:hover {
+  opacity: 1;
+}
+
+.details-hero {
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 10px 30px rgba(2, 8, 23, 0.04);
+}
+
+.hero-left {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.hero-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(15, 23, 42, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-title {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.hero-title h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.hero-provider {
+  opacity: 0.75;
+  margin-top: 4px;
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.85;
+  font-size: 12px;
+}
+
+.chip {
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 999px;
+  padding: 6px 10px;
+  background: rgba(15, 23, 42, 0.03);
+  font-size: 12px;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.card {
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 16px;
+  padding: 14px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(2, 8, 23, 0.03);
+}
+
+.card h2 {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+
+.card h3 {
+  margin: 12px 0 8px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.card ul,
+.card ol {
+  margin: 0;
+  padding-left: 18px;
+  opacity: 0.85;
+}
+
+.card li {
+  margin: 6px 0;
+}
+
+.muted {
+  opacity: 0.7;
+  margin-top: 10px;
+}
+
+.req-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.faq-item {
+  padding: 10px 0;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.faq-item:first-child {
+  border-top: none;
+}
+
+.q {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.a {
+  opacity: 0.85;
+}
+
+/* Badge same vibe */
+.badge {
+  font-size: 11px;
+  padding: 5px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Buttons: keep identical classes as BursariesPage */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+}
+
+.btn.primary {
+  background: #6f8ef6;
+  border-color: rgba(111, 142, 246, 0.55);
+  color: #fff;
+}
+
+.btn.primary:hover {
+  filter: brightness(0.98);
+}
+
+.btn.ghost {
+  background: rgba(15, 23, 42, 0.02);
+  border-color: rgba(15, 23, 42, 0.1);
+  color: rgba(15, 23, 42, 0.85);
+}
+
+.btn.ghost:hover {
+  background: rgba(15, 23, 42, 0.05);
+}
+
+@media (max-width: 900px) {
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+  .details-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,424 @@
+/* src/pages/BursariesPage.css */
+
+/* Page shell: push left like University Guide */
+.bursaries-page {
+  width: 100%;
+}
+
+.bursaries-wrap {
+  width: 100%;
+  max-width: 1100px;      /* same vibe as your ch-wrap */
+  padding: 18px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* One main container box */
+.bursaries-main {
+  background: #fff;
+  border: 1px solid #e6ebf2;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+/* Header */
+.bursaries-wrap .bursaries-header h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.bursaries-wrap .bursaries-header p {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Shared UI (SCOPED) */
+.bursaries-wrap .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 14px;
+  padding: 10px 14px;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  color: #0f172a;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 1px 0 rgba(15, 23, 42, 0.03);
+}
+
+.bursaries-wrap .btn.primary {
+  background: #6f8ef6;
+  border-color: rgba(111, 142, 246, 0.55);
+  color: #fff;
+}
+
+.bursaries-wrap .btn.primary:hover {
+  background: #5f7df2;
+}
+
+.bursaries-wrap .btn.ghost {
+  background: #fff;
+}
+
+.bursaries-wrap .btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Badges (SCOPED) */
+.bursaries-wrap .badge {
+  font-size: 11px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 800;
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.bursaries-wrap .badge.open {
+  background: #ecfdf3;
+  border-color: #bbf7d0;
+  color: #166534;
+}
+
+.bursaries-wrap .badge.soon {
+  background: #fff7ed;
+  border-color: #fed7aa;
+  color: #9a3412;
+}
+
+.bursaries-wrap .badge.closed {
+  background: #fef2f2;
+  border-color: #fecaca;
+  color: #991b1b;
+}
+
+/* Inner section cards (like University Guide) */
+.bursaries-wrap .featured-card,
+.bursaries-wrap .filters-card,
+.bursaries-wrap .bursaries-list {
+  border: 1px solid #e6ebf2;
+  border-radius: 18px;
+  background: #fff;
+  padding: 16px;
+  margin-top: 14px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
+}
+
+/* Featured NSFAS */
+.bursaries-wrap .featured-card {
+  background: linear-gradient(135deg, #f5f8ff 0%, #ffffff 70%);
+}
+
+.bursaries-wrap .featured-left {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.bursaries-wrap .featured-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #e6ebf2;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bursaries-wrap .featured-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bursaries-wrap .logo-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(15, 23, 42, 0.6);
+  font-weight: 800;
+}
+
+.bursaries-wrap .featured-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bursaries-wrap .featured-info h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.bursaries-wrap .featured-summary {
+  margin: 8px 0 12px;
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.bursaries-wrap .featured-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.bursaries-wrap .meta-chip {
+  border: 1px solid #e6ebf2;
+  border-radius: 999px;
+  padding: 7px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Filters */
+.bursaries-wrap .filters-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.bursaries-wrap .searchbox {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 12px;
+  border-radius: 16px;
+  border: 1px solid #e6ebf2;
+  background: #f8fafc;
+}
+
+.bursaries-wrap .searchbox input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.bursaries-wrap .searchbox input::placeholder {
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.bursaries-wrap .filters-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #0f172a;
+  font-weight: 800;
+  border: 1px solid #e6ebf2;
+  border-radius: 16px;
+  padding: 10px 12px;
+  background: #fff;
+}
+
+.bursaries-wrap .filters-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.bursaries-wrap .field label {
+  display: block;
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 6px;
+  font-weight: 800;
+}
+
+.bursaries-wrap .field select {
+  width: 100%;
+  padding: 11px 12px;
+  border-radius: 16px;
+  border: 1px solid #e6ebf2;
+  background: #f8fafc;
+  color: #0f172a;
+  outline: none;
+  font-weight: 700;
+}
+
+/* Grid for bursaries (use unique class so it NEVER clashes with dashboard .grid) */
+.bursaries-wrap .bursaries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 2px;
+}
+
+/* Card */
+.bursaries-wrap .bursary-card {
+  border: 1px solid #e6ebf2;
+  border-radius: 18px;
+  padding: 16px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.bursaries-wrap .bursary-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.08);
+}
+
+.bursaries-wrap .bursary-card-top {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.bursaries-wrap .bursary-logo {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #e6ebf2;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bursaries-wrap .bursary-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bursaries-wrap .bursary-title h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.bursaries-wrap .title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.bursaries-wrap .provider {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 3px;
+  font-weight: 700;
+}
+
+.bursaries-wrap .bursary-summary {
+  margin: 0;
+  color: #475569;
+  font-size: 13px;
+  line-height: 1.45;
+  min-height: 38px;
+}
+
+.bursaries-wrap .bursary-tags,
+.bursaries-wrap .bursary-req {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.bursaries-wrap .tag,
+.bursaries-wrap .req-chip {
+  font-size: 12px;
+  border: 1px solid #e6ebf2;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #f8fafc;
+  color: #334155;
+  font-weight: 800;
+}
+
+.bursaries-wrap .bursary-footer {
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.bursaries-wrap .closing {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* Pagination */
+.bursaries-wrap .pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 22px 0 6px;
+}
+
+.bursaries-wrap .page-info {
+  color: #475569;
+  font-weight: 800;
+}
+
+/* Empty / loading */
+.bursaries-wrap .state {
+  border: 1px dashed #cbd5e1;
+  border-radius: 18px;
+  padding: 22px;
+  text-align: center;
+  background: #fff;
+}
+
+.bursaries-wrap .state-title {
+  font-size: 16px;
+  margin-bottom: 6px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.bursaries-wrap .state-sub {
+  color: #64748b;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.badge.coming {
+  background-color: #e0f0ff;
+  color: #0066cc;
+  border: 1px solid #99ccff;
+}
+
+/* Res*

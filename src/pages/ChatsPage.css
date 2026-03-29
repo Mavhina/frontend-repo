@@ -1,0 +1,306 @@
+/* src/pages/ChatsPage.css */
+
+/* ✅ match other pages: push left (not centered) */
+.ch-page{ width: 100%; }
+
+.ch-wrap{
+  width: 100%;
+  max-width: 1100px;
+  padding: 18px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* ✅ MAIN WHITE WRAPPER like Fee Fund / Bursaries */
+.ch-main{
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  background: #fff;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(2, 8, 23, 0.04);
+}
+
+.ch-head{
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  align-items:flex-start;
+  margin-bottom:14px;
+}
+.ch-head h1{ margin:0; font-size:28px; font-weight: 900; color:#0f172a; }
+.muted{ opacity:.75; color:#64748b; font-weight: 700; }
+.ch-head-actions{ display:flex; gap:10px; }
+
+/* Hero */
+.ch-hero{
+  display:flex;
+  justify-content:space-between;
+  gap:14px;
+  align-items:center;
+  border: 1px solid #e6eefc;
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 14px;
+  background: linear-gradient(135deg, #f5f8ff 0%, #ffffff 70%);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+.ch-hero-left{ display:flex; gap:12px; align-items:center; }
+.ch-hero-icon{
+  width:40px; height:40px;
+  border-radius:14px;
+  display:grid; place-items:center;
+  border:1px solid #e6ebf2;
+  background:#fff;
+  color:#4f7cff;
+}
+.ch-hero-title{ font-weight:900; color:#0f172a; }
+.ch-hero-sub{ color:#64748b; font-weight:700; font-size:13px; }
+.ch-hero-actions{ display:flex; gap:10px; flex-wrap:wrap; }
+
+/* Tabs */
+.ch-tabs{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:14px;
+}
+.ch-tab{
+  border:1px solid #e6ebf2;
+  background:#fff;
+  border-radius:999px;
+  padding:10px 12px;
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  cursor:pointer;
+  font-weight: 900;
+  color:#0f172a;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
+}
+.ch-tab.active{
+  border-color: rgba(111, 142, 246, 0.65);
+  background: #f5f8ff;
+}
+
+/* Grid */
+.ch-grid{
+  display:grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap:14px;
+}
+@media (max-width: 900px){
+  .ch-grid{ grid-template-columns: 1fr; }
+}
+
+/* Cards (scoped to chats) */
+.ch-card{
+  background:#fff;
+  border:1px solid #e6ebf2;
+  border-radius:18px;
+  padding:14px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+.ch-card-head{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  align-items:flex-start;
+  margin-bottom:12px;
+}
+.ch-card h2{ margin:0; font-size:16px; font-weight:900; color:#0f172a; }
+
+/* Buttons (scoped - no global .btn clash) */
+.ch-btn{
+  border:1px solid #e6ebf2;
+  background:#fff;
+  border-radius:12px;
+  padding:10px 12px;
+  cursor:pointer;
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  font-weight: 900;
+  color:#0f172a;
+}
+.ch-btn.primary{
+  background:#6f8ef6;              /* ✅ blue like other pages */
+  border-color: rgba(111, 142, 246, 0.55);
+  color:#fff;
+}
+.ch-btn.primary:hover{ background:#5f7df2; }
+.ch-btn:disabled{ opacity:.6; cursor:not-allowed; }
+
+/* Chips */
+.ch-chip{
+  border: 1px solid #e6ebf2;
+  border-radius:999px;
+  padding:8px 10px;
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  font-size:12px;
+  background:#f8fafc;
+  font-weight: 900;
+  color:#334155;
+}
+
+/* Chatbox */
+.ch-chatbox{
+  border:1px solid #e6ebf2;
+  border-radius:14px;
+  padding:12px;
+  min-height:260px;
+  background:#f8fafc;
+  overflow:auto;
+}
+.ch-empty{ margin-top:12px; }
+
+/* Input */
+.ch-input{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  margin-top:12px;
+}
+.ch-input-icon{
+  width:38px; height:38px;
+  border-radius:12px;
+  display:grid; place-items:center;
+  border:1px solid #e6ebf2;
+  background:#fff;
+  color:#4f7cff;
+}
+.ch-input input{
+  flex:1;
+  height:40px;
+  border-radius:12px;
+  border:1px solid #e6ebf2;
+  padding:0 12px;
+  outline:none;
+  font-weight: 800;
+  background:#fff;
+}
+
+/* Quick pills */
+.ch-quick{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:8px;
+}
+.ch-pill{
+  border-radius:999px;
+  border:1px solid #e6ebf2;
+  background:#fff;
+  padding:10px 12px;
+  cursor:pointer;
+  font-weight: 900;
+}
+.ch-pill:hover{ background:#f8fafc; }
+
+/* Placeholder + notes */
+.ch-placeholder{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  border:1px dashed rgba(15, 23, 42, 0.22);
+  border-radius:14px;
+  padding:12px;
+  margin-top:10px;
+  background:#f8fafc;
+}
+.ch-placeholder-title{ font-weight:900; color:#0f172a; }
+
+.ch-note{
+  margin-top:12px;
+  display:flex;
+  gap:8px;
+  align-items:center;
+  border:1px solid #e6eefc;
+  border-radius:14px;
+  padding:10px 12px;
+  background:#f5f8ff;
+  font-weight: 800;
+  color:#334155;
+}
+
+.ch-bullets{ margin:10px 0 0 18px; color:#475569; font-weight: 800; }
+
+/* ---------------- COMMUNITY CHAT STYLES ---------------- */
+.community-box{
+  max-height:460px;
+  overflow:auto;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+/* each message row */
+.comm-row{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  margin-bottom:10px;
+}
+.comm-row.other{ align-items:flex-start; }
+.comm-row.me{ align-items:flex-end; }
+
+/* meta line */
+.comm-meta{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:12px;
+  opacity:.95;
+  max-width:80%;
+}
+.comm-user{ font-weight:900; color:#0f172a; }
+.comm-time{ opacity:.7; font-variant-numeric: tabular-nums; }
+
+/* push meta right for mine */
+.comm-row.me .comm-meta{
+  margin-left:auto;
+  justify-content:flex-end;
+  text-align:right;
+}
+
+/* bubble base */
+.comm-bubble{
+  border:1px solid rgba(15, 23, 42, 0.10);
+  border-radius:14px;
+  padding:10px 12px;
+  max-width:80%;
+  width:fit-content;
+  background:#fff;
+  white-space:pre-wrap;
+}
+/* push bubble right for mine */
+.comm-row.me .comm-bubble{ margin-left:auto; }
+
+/* bubble colors */
+.comm-bubble.mine{
+  background: rgba(111, 142, 246, 0.14);
+  border-color: rgba(111, 142, 246, 0.28);
+}
+.comm-bubble.theirs{ background:#fff; }
+
+/* Delete button */
+.comm-del{
+  margin-left:6px;
+  border:1px solid #e6ebf2;
+  background:#fff;
+  border-radius:10px;
+  padding:6px 8px;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+}
+.comm-del:hover{ opacity:.85; }
+
+/* Responsive padding */
+@media (max-width: 700px){
+  .ch-wrap{ padding:16px; }
+  .ch-main{ padding:14px; }
+  .ch-hero{ flex-direction:column; align-items:flex-start; }
+  .ch-hero-actions{ width:100%; }
+}

@@ -1,0 +1,84 @@
+.rw-wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.rw-card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.rw-head {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.rw-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: rgba(234,179,8,0.15);
+  color: #ca8a04;
+}
+
+.rw-coming {
+  margin: 12px 0 20px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(37,99,235,0.08);
+  border: 1px solid rgba(37,99,235,0.18);
+  font-weight: 600;
+}
+
+.rw-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  margin-bottom: 20px;
+}
+
+.rw-feature {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 14px;
+  padding: 12px;
+  background: rgba(0,0,0,0.02);
+}
+
+.rw-title {
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+
+.rw-text {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.rw-prizes h2 {
+  margin: 10px 0 8px;
+}
+
+.rw-prizes ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.rw-prizes li {
+  margin: 6px 0;
+}
+
+.rw-note {
+  margin-top: 16px;
+  font-size: 13px;
+  opacity: 0.75;
+}
