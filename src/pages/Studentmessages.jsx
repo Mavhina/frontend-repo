@@ -3,7 +3,7 @@ import {
   Search, MoreHorizontal, Send, Paperclip,
   Smile, CheckCheck, Check, Users, Megaphone,
 } from "lucide-react";
-import "./StudentMessages.css";
+import "./Studentmessages.css";
 import api from "../services/api";
 import { Client } from "@stomp/stompjs";
 import { useUnread } from "./Unreadcontext";
